@@ -8,17 +8,6 @@ class AnsibleCustom < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
-  bottle do
-    root_url "https://ghcr.io/v2/homebrew/core/ansible"
-    sha256 cellar: :any,                 arm64_sonoma:   "f08a0a73663df3fa3f87f6fa8b3c21d83ddddbb2886cd6d66b4d2a5437d5cc6d"
-    sha256 cellar: :any,                 arm64_ventura:  "8653d85aba0965705d7f27359eb520bed0fea83fed748d44fa774b049b50f908"
-    sha256 cellar: :any,                 arm64_monterey: "8c763a2de426a281030e14e248a01631d077e84b0019dc1dc36ebbe40445af29"
-    sha256 cellar: :any,                 sonoma:         "9adcf18d3c59d1601fbfe4c2a8230c8872ca16f7db0a7d02b9a657caf72b3855"
-    sha256 cellar: :any,                 ventura:        "8129250f664a547253b567a0144aee3250e988f89194888cfbd4b8620b9506c5"
-    sha256 cellar: :any,                 monterey:       "1e7fc141ff7580a20384498e0f94763ccb779a3360f20129e9204f99031a6a57"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49308ec0c47771c652faa2720c26d30a1c039f027f6b04b7341a62fbc1342f4b"
-  end
-
   # `pkg-config` and `rust` are for bcrypt
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
